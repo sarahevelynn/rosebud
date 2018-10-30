@@ -17,12 +17,12 @@ export default function Header() {
         <Link to="/about">
           <h2 id="navItem">About Us</h2>
         </Link>
-        <Link to="/services">
+        <Link to="/locations">
           <h2 id="navItem">Our Locations</h2>
         </Link>
-        <a href={"mailto:samrose244@gmail.com"}>
+        <Link to="/contact">
           <h2 id="navItem">Contact Us</h2>
-        </a>
+        </Link>
       </nav>
     </header>
   );

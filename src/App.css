@@ -31,3 +31,23 @@ a {
   color: black;
   text-decoration: none;
 }
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  padding-left: 3rem;
+  padding-right: 3rem
+}
+
+#social{
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+}
+
+.socialPhoto {
+  height:4rem;
+  padding:1rem
+}
