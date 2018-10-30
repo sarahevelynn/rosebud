@@ -1,9 +1,11 @@
-import React from "react";
+import React, { Component } from "react";
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 
-export default function Contact() {
-  return (
-<div>
-</div>
-  );
+export default class Contact extends React.Component {
+  render() {
+    return (
+      <div>
+      </div>
+    );
+  }
 }
