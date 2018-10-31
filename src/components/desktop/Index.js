@@ -4,6 +4,7 @@ import Header from "./header/Index";
 import Welcome from "./welcome/Index";
 import About from "./about/Index";
 import Locations from "./location/Index";
+import CompanySignup from "./companyForm/Index";
 import Contact from "./contact/Index";
 import Footer from "./footer/Index";
 
@@ -17,6 +18,7 @@ export default class Desktop extends React.Component {
             <Route exact path="/" component={Welcome} />
             <Route exact path="/about" component={About} />
             <Route exact path="/locations" component={Locations} />
+            <Route exact path="/companySignup" component={CompanySignup} />
             <Route exact path="/contact" component={Contact} />
             <Footer />
           </div>

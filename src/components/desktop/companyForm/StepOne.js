@@ -1,5 +1,5 @@
 import React from "react";
-import SimpleStorage from "../../stores/SimpleStorage";
+import SimpleStorage from "./SimpleStorage";
 
 export class StepOne extends React.Component {
   constructor() {

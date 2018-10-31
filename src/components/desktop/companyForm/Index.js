@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
-import "../App/NavBar.css";
 import MultiStep from "./MultiStep";
+import "../../../progressBar.css";
 
 export default class CompanySignup extends React.Component {
   render() {

@@ -1,9 +1,7 @@
 import React, { Component } from "react";
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
-import Header from "../Header/Index.js";
-import FooterMovable from "../Footer/footerMovable";
 
-export class CompanyWelcome extends React.Component {
+export class CompanyEnrollment extends React.Component {
   render() {
     return (
       <div className="aboutSections">

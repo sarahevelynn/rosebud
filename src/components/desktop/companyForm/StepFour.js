@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { withRouter, Redirect } from "react-router-dom";
-import SimpleStorage, { resetParentState } from "../../stores/SimpleStorage";
+import SimpleStorage, { resetParentState } from "./SimpleStorage";
 import Loader from "react-loader-spinner";
 
 var baseURL = "https://saveaway401k.herokuapp.com/";
@@ -15,54 +15,40 @@ const Confirm = ({ history }) => (
 class StepFour extends Component {
   constructor(props) {
     let companyName = JSON.parse(window.localStorage._companyName);
-    let accountName = JSON.parse(window.localStorage._accountName);
-    let signupEmail = JSON.parse(window.localStorage._signupEmail);
+    let companyEmail = JSON.parse(window.localStorage._companyEmail);
     let companyPhone = JSON.parse(window.localStorage._companyPhone);
-    let signupAdressStreet = JSON.parse(
-      window.localStorage._signupAdressStreet
+    let companyAdressStreet = JSON.parse(
+      window.localStorage._companyAdressStreet
     );
-    let signupAdressApt = JSON.parse(window.localStorage._signupAdressApt);
-    let signupAdressCity = JSON.parse(window.localStorage._signupAdressCity);
-    let signupAdressState = JSON.parse(window.localStorage._signupAdressState);
-    let signupAdressZip = JSON.parse(window.localStorage._signupAdressZip);
-    let companyEIN = JSON.parse(window.localStorage._companyEIN);
-    let businessHours = JSON.parse(window.localStorage._businessHours);
-    let AutoEnroll = JSON.parse(window.localStorage._AutoEnroll);
-    let enrollmentPercentage = JSON.parse(
-      window.localStorage._enrollmentPercentage
+    let companyAdressApt = JSON.parse(window.localStorage._companyAdressApt);
+    let companyAdressCity = JSON.parse(window.localStorage._companyAdressCity);
+    let companyAdressState = JSON.parse(
+      window.localStorage._companyAdressState
     );
-    let planType = JSON.parse(window.localStorage._planType);
-    let provider = JSON.parse(window.localStorage._provider);
-    let paymentCycle = JSON.parse(window.localStorage._paymentCycle);
-    let Admin = JSON.parse(window.localStorage._Admin);
-    let AdminName = JSON.parse(window.localStorage._AdminName);
-    let AdminPhone = JSON.parse(window.localStorage._AdminPhone);
-    let AdminEmail = JSON.parse(window.localStorage._AdminEmail);
-    let PlanStatus = JSON.parse(window.localStorage._PlanStatus);
+    let companyAdressZip = JSON.parse(window.localStorage._companyAdressZip);
+    let contactName = JSON.parse(window.localStorage._contactName);
+    let contactNumber = JSON.parse(window.localStorage._contactNumber);
+    let contactTitle = JSON.parse(window.localStorage._contactTitle);
+    let extraInfo = JSON.parse(window.localStorage._extraInfo);
+    let flavors = JSON.parse(window.localStorage._flavors);
+    let capacity = JSON.parse(window.localStorage._capacity);
     super(props);
     this.state = {
       redirect: false,
       companyName: companyName,
-      accountName: accountName,
-      signupEmail: signupEmail,
+      companyEmail: companyEmail,
       companyPhone: companyPhone,
-      signupAdressStreet: signupAdressStreet,
-      signupAdressApt: signupAdressApt,
-      signupAdressCity: signupAdressCity,
-      signupAdressState: signupAdressState,
-      signupAdressZip: signupAdressZip,
-      companyEIN: companyEIN,
-      businessHours: businessHours,
-      AutoEnroll: AutoEnroll,
-      enrollmentPercentage: enrollmentPercentage,
-      planType: planType,
-      provider: provider,
-      paymentCycle: paymentCycle,
-      Admin: Admin,
-      AdminName: AdminName,
-      AdminPhone: AdminPhone,
-      AdminEmail: AdminEmail,
-      PlanStatus: PlanStatus,
+      companyAdressStreet: companyAdressStreet,
+      companyAdressApt: companyAdressApt,
+      companyAdressCity: companyAdressCity,
+      companyAdressState: companyAdressState,
+      companyAdressZip: companyAdressZip,
+      contactName: contactName,
+      contactNumber: contactNumber,
+      contactTitle: contactTitle,
+      extraInfo: extraInfo,
+      flavors: flavors,
+      capacity: capacity,
       message: "",
       isLoading: false
     };
@@ -73,26 +59,19 @@ class StepFour extends Component {
     var data = new FormData(event.target);
     return {
       companyName: data.get("companyName"),
-      accountName: data.get("accountName"),
-      signupEmail: data.get("signupEmail"),
+      companyEmail: data.get("companyEmail"),
       companyPhone: data.get("companyPhone"),
-      signupAdressStreet: data.get("signupAdressStreet"),
-      signupAdressApt: data.get("signupAdressApt"),
-      signupAdressCity: data.get("signupAdressCity"),
-      signupAdressState: data.get("signupAdressState"),
-      signupAdressZip: data.get("signupAdressZip"),
-      companyEIN: data.get("companyEIN"),
-      businessHours: data.get("businessHours"),
-      AutoEnroll: data.get("AutoEnroll"),
-      enrollmentPercentage: data.get("enrollmentPercentage"),
-      planType: data.get("planType"),
-      provider: data.get("provider"),
-      paymentCycle: data.get("paymentCycle"),
-      Admin: data.get("Admin"),
-      AdminName: data.get("AdminName"),
-      AdminPhone: data.get("AdminPhone"),
-      AdminEmail: data.get("AdminEmail"),
-      PlanStatus: data.get("PlanStatus")
+      companyAdressStreet: data.get("companyAdressStreet"),
+      companyAdressApt: data.get("companyAdressApt"),
+      companyAdressCity: data.get("companyAdressCity"),
+      companyAdressState: data.get("companyAdressState"),
+      companyAdressZip: data.get("companyAdressZip"),
+      contactName: data.get("contactName"),
+      contactNumber: data.get("contactNumber"),
+      contactTitle: data.get("contactTitle"),
+      extraInfo: data.get("extraInfo"),
+      flavors: data.get("flavors"),
+      capacity: data.get("capacity")
     };
   };
 
@@ -164,85 +143,60 @@ class StepFour extends Component {
                 name="companyName"
                 defaultValue={this.state.companyName}
               />
-              <label htmlFor="companyPhone">Company Phone Number</label>
+              <label htmlFor="companyEmail">Company Phone Email</label>
               <input
                 className="formInput"
-                name="companyPhone"
-                defaultValue={this.state.companyPhone}
+                name="companyEmail"
+                defaultValue={this.state.companyEmail}
               />
             </div>
           </div>
           <br />
           <div className="formSection">
-            <div className="formAnswer">
-              <label htmlFor="accountName">Your Name</label>
-              <input
-                className="formInput"
-                name="accountName"
-                defaultValue={this.state.accountName}
-              />
-              <label htmlFor="signupEmail">Your Email</label>
-              <input
-                className="formInput"
-                name="signupEmail"
-                defaultValue={this.state.signupEmail}
-              />
-            </div>
+            <label htmlFor="companyPhone">Company Phone Number</label>
+            <input
+              className="formInput"
+              name="companyPhone"
+              defaultValue={this.state.companyPhone}
+            />
           </div>
           <br />
           <div className="formSection">
-            <label htmlFor="signupAdress">Company Adress</label>
+            <label htmlFor="companyAdress">Company Adress</label>
             <hr />
             <div className="formAnswer">
-              <label htmlFor="signupAdressStreet">Street </label>
+              <label htmlFor="companyAdressStreet">Street </label>
               <input
                 className="formInput"
-                name="signupAdressStreet"
-                defaultValue={this.state.signupAdressStreet}
+                name="companyAdressStreet"
+                defaultValue={this.state.companyAdressStreet}
               />
-              <label htmlFor="signupAdressApt">Apt, Unit, Floor</label>
+              <label htmlFor="companyAdressApt">Apt, Unit, Floor</label>
               <input
                 className="formInput"
-                name="signupAdressApt"
-                defaultValue={this.state.signupAdressApt}
+                name="companyAdressApt"
+                defaultValue={this.state.companyAdressApt}
               />
             </div>
             <br />
             <div className="formAnswer">
-              <label htmlFor="signupAdressCity">City</label>
+              <label htmlFor="companyAdressCity">City</label>
               <input
                 className="formInput"
-                name="signupAdressCity"
-                defaultValue={this.state.signupAdressCity}
+                name="companyAdressCity"
+                defaultValue={this.state.companyAdressCity}
               />
-              <label htmlFor="signupAdressState">State</label>
+              <label htmlFor="companyAdressState">State</label>
               <input
                 className="formInput"
-                name="signupAdressState"
-                defaultValue={this.state.signupAdressState}
+                name="companyAdressState"
+                defaultValue={this.state.companyAdressState}
               />
-              <label htmlFor="signupAdressZip">Zip Code</label>
+              <label htmlFor="companyAdressZip">Zip Code</label>
               <input
                 className="formInput"
-                name="signupAdressZip"
-                defaultValue={this.state.signupAdressZip}
-              />
-            </div>
-          </div>
-          <br />
-          <div className="formSection">
-            <div className="formAnswer">
-              <label htmlFor="companyEIN">Company Tax Number (EIN)</label>
-              <input
-                className="formInput"
-                name="companyEIN"
-                defaultValue={this.state.companyEIN}
-              />
-              <label htmlFor="businessHours">Business Hours</label>
-              <input
-                className="formInput"
-                name="businessHours"
-                defaultValue={this.state.businessHours}
+                name="companyAdressZip"
+                defaultValue={this.state.companyAdressZip}
               />
             </div>
           </div>
@@ -251,30 +205,26 @@ class StepFour extends Component {
           <br />
           <div className="formSection2">
             <div className="formAnswer">
-              <label htmlFor="AutoEnroll">
-                Would you like to Auto Enroll Employees?
-              </label>
+              <label htmlFor="contactName">What is your name?</label>
               <input
                 className="formInput"
-                name="AutoEnroll"
-                defaultValue={this.state.AutoEnroll}
+                name="contactName"
+                defaultValue={this.state.contactName}
               />
-              <label htmlFor="planType">Plan Type</label>
+              <label htmlFor="contactNumber">Your contact number</label>
               <input
                 className="formInput"
-                name="planType"
-                defaultValue={this.state.planType}
+                name="contactNumber"
+                defaultValue={this.state.contactNumber}
               />
             </div>
             <hr />
             <div className="formAnswer">
-              <label htmlFor="enrollmentPercentage">
-                Auto Enrollment Percentage
-              </label>
+              <label htmlFor="contactTitle">What is your title</label>
               <input
                 className="formInput"
-                name="enrollmentPercentage"
-                defaultValue={this.state.enrollmentPercentage}
+                name="contactTitle"
+                defaultValue={this.state.contactTitle}
               />
             </div>
           </div>
@@ -283,89 +233,52 @@ class StepFour extends Component {
           <br />
           <div className="formSection2">
             <div className="formAnswer">
-              <label htmlFor="provider">Payroll Provider</label>
+              <label htmlFor="extraInfo">Extra info</label>
               <input
                 className="formInput"
-                name="provider"
-                defaultValue={this.state.provider}
+                name="extraInfo"
+                defaultValue={this.state.extraInfo}
               />
-              <label htmlFor="paymentCycle">Payment Cycle</label>
+              <label htmlFor="flavors">Flavors</label>
               <input
                 className="formInput"
-                name="paymentCycle"
-                defaultValue={this.state.paymentCycle}
+                name="flavors"
+                defaultValue={this.state.flavors}
               />
             </div>
           </div>
           <div className="formSection2">
             <div className="formAnswer">
-              <label htmlFor="Admin">
-                Will you be the Administrator of the plan?
-              </label>
+              <label htmlFor="capacity">Capacity</label>
               <input
                 className="formInput"
-                name="Admin"
-                defaultValue={this.state.Admin}
+                name="capacity"
+                defaultValue={this.state.capacity}
               />
             </div>
             <hr />
-            <label>
-              If you will not be the administrator, this is the administrator
-              information. <br />
-              ***Note: it will be blank if you are the admin.
-            </label>
-            <div className="adminOtherInputs">
+            <div className="waitingMessage">
+              {this.state.isLoading === true ? (
+                <Loader
+                  type="ThreeDots"
+                  color="#c33539"
+                  height="50"
+                  width="100"
+                  className="Loader"
+                />
+              ) : (
+                <p> {this.state.message} </p>
+              )}
+            </div>
+            <div className="multiPageSubmit">
               <input
-                className="formInput"
-                name="AdminName"
-                defaultValue={this.state.AdminName}
-              />
-              <input
-                className="formInput"
-                name="AdminPhone"
-                defaultValue={this.state.AdminPhone}
-              />
-              <input
-                className="formInput"
-                name="AdminEmail"
-                defaultValue={this.state.AdminEmail}
+                type="submit"
+                className="submitButton"
+                defaultValue="Submit Your Enrollment"
               />
             </div>
             <hr />
-            <div className="formAnswer">
-              <label htmlFor="PlanStatus">
-                Does your company have a 401k plan now?
-              </label>
-              <input
-                className="formInput"
-                name="PlanStatus"
-                defaultValue={this.state.PlanStatus}
-              />
-            </div>
           </div>
-          <br />
-          <hr />
-          <div className="waitingMessage">
-            {this.state.isLoading === true ? (
-              <Loader
-                type="ThreeDots"
-                color="#c33539"
-                height="50"
-                width="100"
-                className="Loader"
-              />
-            ) : (
-              <p > {this.state.message} </p>
-            )}
-          </div>
-          <div className="multiPageSubmit">
-            <input
-              type="submit"
-              className="submitButton"
-              defaultValue="Submit Your Enrollment"
-            />
-          </div>
-          <hr />
         </form>
       </div>
     );

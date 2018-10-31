@@ -1,4 +1,5 @@
 import React from "react";
+import "../../../progressBar.css";
 import { CompanyEnrollment } from "./WelcomeStep";
 import { StepOne } from "./StepOne";
 import { StepTwo } from "./StepTwo";
