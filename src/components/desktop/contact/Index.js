@@ -17,9 +17,7 @@ export default class Contact extends Component {
     return {
       signupName: data.get("signupName"),
       signupEmail: data.get("signupEmail"),
-      signupPhone: data.get("signupPhone"),
-      signupCoName: data.get("signupCoName"),
-      EmployeeNumber: data.get("EmployeeNumber")
+      signupPhone: data.get("message"),
     };
   };
 
@@ -73,25 +71,28 @@ export default class Contact extends Component {
             <h2>General Inquiry!</h2>
             <form className="signupForm" onSubmit={this.addBasicInfo}>
               <label htmlFor="signupName">Your Full Name</label>
-              <input type="text" name="signupName" />
+              <br />
+              <input className="formInput" type="text" name="signupName" />
               <br />
               <label htmlFor="signupEmail">Your Email Adress</label>
-              <input type="text" name="signupEmail" />
+              <br />
+              <input className="formInput" type="text" name="signupEmail" />
               <br />
               <label htmlFor="message">What Can We Help You With?</label>
-              <input type="text" name="message" />
+              <br />
+              <input id="message" type="text" name="message" />
               <br />
               {this.state.isLoading === true ? (
                 <Loader
                   type="ThreeDots"
-                  color="#c33539"
+                  color="#fff58d"
                   height="50"
                   width="100"
                 />
               ) : (
                 <p> {this.state.message} </p>
               )}
-              <input type="submit" className="submitButton" value="Submit" />
+              <input type="submit" id="submitButton" value="Submit" />
             </form>
           </div>
         </div>

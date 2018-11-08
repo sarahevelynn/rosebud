@@ -83,3 +83,46 @@ footer {
   padding-left: 10rem;
   padding-right: 10rem
 }
+
+#frontPhoto{
+  width:100%
+}
+
+#infoSignup{
+  margin:0
+}
+
+#signup{
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: left;
+  font-size: 2rem
+}
+
+.formInput{
+  width:60%;
+  height:2rem
+}
+
+#message{
+  width:30rem;
+  height: 10rem
+}
+
+#submitButton {
+  height: 40px;
+  font-size: 1.5rem;
+  background-color: #0d395b;
+  color: white;
+  border-radius: 4px;
+}
+
+#submitButton:hover {
+  height: 40px;
+  font-size: 1.5rem;
+  background-color: white;
+  color: #0d395b;
+  border-radius: 4px;
+}
