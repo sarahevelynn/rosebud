@@ -58,14 +58,14 @@ footer {
 }
 
 #about1{
-  background-color: rgb(13, 57, 90, .9);
+  background-color: #29404f;
   color:white;
   padding-top: 1rem;
   padding-bottom: 1rem
 }
 
 #about2{
-  background-color: rgb(24, 60, 140, .9);
+  background-color: #0d395b;
   color:white;
   padding-top: 1rem;
   padding-bottom: 1rem
@@ -73,7 +73,7 @@ footer {
 }
 
 #about3{
-  background-color: rgb(24, 100, 200, .9);
+  background-color: #365366;
   color:white;
   padding-top: 1rem;
   padding-bottom: 1rem
