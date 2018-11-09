@@ -63,32 +63,29 @@ export class StepOne extends React.Component {
           Please Fill Out Your Administrator and Company Information
         </h2>
         <div className="formSection">
-          <label htmlFor="companyName">Company Name</label>
           <input
             type="text"
             className="shorterInput"
             value={this.state.companyName}
             onChange={this.handleNameChange}
             name="companyName"
+            placeholder="Company Name"
           />
-          <label htmlFor="companyPhone">Company Phone Number</label>
           <input
             type="text"
             className="shorterInput"
             value={this.state.companyPhone}
             onChange={this.handlePhoneChange}
             name="companyPhone"
+            placeholder="Company Phone"
           />
-        </div>
-        <br />
-        <div className="formSection">
-          <label htmlFor="companyEmail">Your Company Email</label>
           <input
             type="text"
             className="shorterInput"
             value={this.state.companyEmail}
             onChange={this.handleEmailChange}
             name="companyEmail"
+            placeholder="Company Email"
           />
         </div>
         <br />

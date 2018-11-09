@@ -6,7 +6,7 @@ export class StepThree extends React.Component {
     super();
     this.state = {
       flavors: "",
-      capacity: "",
+      capacity: ""
     };
     this.initialState = this.state;
   }
@@ -23,7 +23,6 @@ export class StepThree extends React.Component {
     });
   };
 
-
   render() {
     return (
       <div>
@@ -32,26 +31,36 @@ export class StepThree extends React.Component {
           Please Indicate Your Administrator and Current Plan
         </h2>
         <div className="formSection2">
-          <label htmlFor="flavors">
-            What flavors do you want?
+          <label htmlFor="flavors">What flavors do you want?</label>
+          <label className="form-check-label">
+            <input
+              type="checkbox"
+              checked={this.state.isDrake}
+              onChange={this.toggleChangeDrake}
+              className="flavors"
+            />
+            coco
           </label>
-          <select
-                name="flavors"
-                onChange={this.handleFlavors}
-                value={this.state.flavors}
-                className="signupInputDrop"
-              >
-                <option value="" disabled selected>
-                  Looking to carry
-                </option>
-                <option>coco</option>
-                <option>vanilla</option>
-                <option>strawberry</option>
-              </select>
+          <label className="form-check-label">
+            <input
+              type="checkbox"
+              checked={this.state.isDrake}
+              onChange={this.toggleChangeDrake}
+              className="flavors"
+            />
+            strawberry
+          </label>
+          <label className="form-check-label">
+            <input
+              type="checkbox"
+              checked={this.state.isDrake}
+              onChange={this.toggleChangeDrake}
+              className="flavors"
+            />
+            vanilla
+          </label>
           <hr />
-          <label htmlFor="capacity">
-            How much can you handle?
-          </label>
+          <label htmlFor="capacity">How much can you handle?</label>
           <input
             type="text"
             className="shorterInput"

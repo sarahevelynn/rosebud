@@ -48,42 +48,36 @@ export class StepTwo extends React.Component {
           Please Indicate Your Enrollment Preferences
         </h2>
         <div className="formSection2">
-          <label htmlFor="contactName">What is your name?</label>
           <input
             type="text"
             className="shorterInput"
             value={this.state.companyPhone}
             onChange={this.handlePhoneChange}
             name="companyPhone"
+            placeholder="Your name"
           />
-          <hr />
-          <label htmlFor="contactNumber">What is your contact number?</label>
           <input
             type="text"
             className="dropDownInput"
             onChange={this.handleContactNumber}
             value={this.state.contactNumber}
             name="contactNumber"
-            placeholder="Insert percentage you want to match"
+            placeholder="Your contact number"
           />
-          <hr />
-        </div>
-
-        <hr />
-        <div className="formSection2">
-          <label htmlFor="contactTitle">What is your title?</label>
           <input
             type="text"
             className="shorterInput"
             value={this.state.contactTitle}
             onChange={this.handleContactTitle}
             name="contactTitle"
+            placeholder="Your title"
           />
           <hr />
           <label htmlFor="extraInfo">Any extra information about yourself?</label>
+          <br />
           <input
             type="text"
-            className="shorterInput"
+            id="message"
             value={this.state.extraInfo}
             onChange={this.handleExtraInfo}
             name="extraInfo"

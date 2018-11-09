@@ -61,22 +61,27 @@ footer {
   background-color: #29404f;
   color:white;
   padding-top: 1rem;
-  padding-bottom: 1rem
+  padding-bottom: 1rem;
+  text-align: left;
+  padding-right: 25rem
 }
 
 #about2{
   background-color: #0d395b;
   color:white;
   padding-top: 1rem;
-  padding-bottom: 1rem
-
+  padding-bottom: 1rem;
+  text-align: left;
+  padding-left: 25rem
 }
 
 #about3{
   background-color: #365366;
   color:white;
   padding-top: 1rem;
-  padding-bottom: 1rem
+  padding-bottom: 1rem;
+  text-align: left;
+  padding-right: 25rem
 }
 
 #welcomePage{
@@ -99,6 +104,17 @@ footer {
   justify-content: center;
   text-align: left;
   font-size: 2rem
+}
+
+.signUp{
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.multiFormDiv{
+
 }
 
 .formInput{
