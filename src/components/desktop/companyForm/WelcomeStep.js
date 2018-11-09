@@ -7,14 +7,14 @@ export class CompanyEnrollment extends React.Component {
       <div className="aboutSections">
         <div className="aboutContent">
           <div id="welcomePage">
-            <h3>
-              Welcome to RoseBud.
-              <br />
+            <h1 id="welcomeForm">Welcome to RoseBud.</h1>
+            <h2>
               We would love to explore a relationship with your company.
               <br />
-              Please fill out the following steps to apply to carry our product
-              in your store.
-            </h3>
+              Please fill out the following steps to apply
+              <br />
+              to carry our product in your store.
+            </h2>
           </div>
         </div>
       </div>

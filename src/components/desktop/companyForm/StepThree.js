@@ -6,14 +6,29 @@ export class StepThree extends React.Component {
     super();
     this.state = {
       flavors: "",
-      capacity: ""
+      capacity: "",
+      coco: "",
+      vanilla: "",
+      strawberry: ""
     };
     this.initialState = this.state;
   }
 
-  handleFlavors = event => {
+  handleCoco = event => {
     this.setState({
-      flavors: event.target.flavors
+      flavors: event.target.coco
+    });
+  };
+
+  handleVanilla = event => {
+    this.setState({
+      flavors: event.target.vanilla
+    });
+  };
+
+  handleStrawberry = event => {
+    this.setState({
+      flavors: event.target.strawberry
     });
   };
 
@@ -32,42 +47,50 @@ export class StepThree extends React.Component {
         </h2>
         <div className="formSection2">
           <label htmlFor="flavors">What flavors do you want?</label>
-          <label className="form-check-label">
-            <input
-              type="checkbox"
-              checked={this.state.isDrake}
-              onChange={this.toggleChangeDrake}
-              className="flavors"
-            />
-            coco
-          </label>
-          <label className="form-check-label">
-            <input
-              type="checkbox"
-              checked={this.state.isDrake}
-              onChange={this.toggleChangeDrake}
-              className="flavors"
-            />
-            strawberry
-          </label>
-          <label className="form-check-label">
-            <input
-              type="checkbox"
-              checked={this.state.isDrake}
-              onChange={this.toggleChangeDrake}
-              className="flavors"
-            />
-            vanilla
-          </label>
+          <div>
+            <label className="form-check-label">
+              <input
+                type="checkbox"
+                checked={this.state.coco}
+                onChange={this.handleCoco}
+                className="flavors"
+              />
+              coco
+            </label>
+            <label className="form-check-label">
+              <input
+                type="checkbox"
+                checked={this.state.strawberry}
+                onChange={this.handleStrawberry}
+                className="flavors"
+              />
+              strawberry
+            </label>
+            <label className="form-check-label">
+              <input
+                type="checkbox"
+                checked={this.state.vanilla}
+                onChange={this.handleVanilla}
+                className="flavors"
+              />
+              vanilla
+            </label>
+          </div>
           <hr />
-          <label htmlFor="capacity">How much can you handle?</label>
-          <input
-            type="text"
-            className="shorterInput"
-            value={this.state.capacity}
+          <label htmlFor="capacity">How Big of a Monthly Order?</label>
+          <select
+            name="subscription"
             onChange={this.handleCapacity}
-            name="capacity"
-          />
+            value={this.state.capacity}
+            className="signupInputDrop"
+          >
+            <option value="" disabled selected>
+              Look for..
+            </option>
+            <option>50 Pints/month</option>
+            <option>100 Pints/month</option>
+            <option>100+ Pints/month</option>
+          </select>
         </div>
         <br />
         <hr className="mutliStepLine" />

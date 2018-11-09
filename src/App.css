@@ -52,6 +52,10 @@ footer {
   padding:1rem
 }
 
+h2{
+  color:#24344b
+}
+
 .aboutSection{
   padding-left: 10rem;
   padding-right: 10rem
@@ -120,6 +124,20 @@ footer {
 .formInput{
   width:60%;
   height:2rem
+}
+
+#welcomeForm{
+  font-size: 3rem;
+  margin:0;
+  color: #24344b
+}
+
+.shorterInput{
+
+}
+
+.signupInputDrop{
+  
 }
 
 #message{
