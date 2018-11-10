@@ -126,18 +126,58 @@ h2{
   height:2rem
 }
 
+.shorterInput{
+  text-align: center;
+}
+
 #welcomeForm{
   font-size: 3rem;
   margin:0;
   color: #24344b
 }
 
-.shorterInput{
+.formHeader{
+  font-size: 2rem;
+  font-weight: 450;
+  color: #24344b
+}
 
+.shorterInput{
+  margin-left: 1rem;
+  margin-right: 1rem;
+  font-size: 1.5rem
+}
+
+#addressLabel{
+  font-size: 1.7rem;
+  color: #0d395b;
+  font-weight:400;
+  margin:0
+}
+
+.addressInput{
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+  margin-left: 1rem;
+  width: auto;
+  text-align: center;
+}
+
+#extra{
+  font-weight: normal;
+  margin: 0;
+  margin-top: 2rem
+}
+
+#order{
+  font-size: 2rem;
+  font-weight: normal;
+  color: #0d395b;
 }
 
 .signupInputDrop{
-  
+  margin-top: 1rem;
+  font-size: 1.5rem
 }
 
 #message{
@@ -159,4 +199,16 @@ h2{
   background-color: white;
   color: #0d395b;
   border-radius: 4px;
+}
+
+.formLabel{
+  font-size: 2rem;
+  padding-right: 1rem;
+  padding-left: 0.3rem;
+  color: #0d395b;
+}
+
+.flavors{
+  height:2rem;
+  margin-right: 0.5rem;
 }

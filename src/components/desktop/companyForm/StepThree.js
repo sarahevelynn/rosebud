@@ -43,12 +43,11 @@ export class StepThree extends React.Component {
       <div>
         <SimpleStorage parent={this} />
         <h2 className="formHeader">
-          Please Indicate Your Administrator and Current Plan
+          Please Indicate Your Flavor Preference and Amount
         </h2>
         <div className="formSection2">
-          <label htmlFor="flavors">What flavors do you want?</label>
           <div>
-            <label className="form-check-label">
+            <label className="formLabel">
               <input
                 type="checkbox"
                 checked={this.state.coco}
@@ -57,7 +56,7 @@ export class StepThree extends React.Component {
               />
               coco
             </label>
-            <label className="form-check-label">
+            <label className="formLabel">
               <input
                 type="checkbox"
                 checked={this.state.strawberry}
@@ -66,7 +65,7 @@ export class StepThree extends React.Component {
               />
               strawberry
             </label>
-            <label className="form-check-label">
+            <label className="formLabel">
               <input
                 type="checkbox"
                 checked={this.state.vanilla}
@@ -77,7 +76,7 @@ export class StepThree extends React.Component {
             </label>
           </div>
           <hr />
-          <label htmlFor="capacity">How Big of a Monthly Order?</label>
+          <h3 id="order" htmlFor="capacity">Monthly Order Quantity?</h3>
           <select
             name="subscription"
             onChange={this.handleCapacity}
@@ -85,7 +84,7 @@ export class StepThree extends React.Component {
             className="signupInputDrop"
           >
             <option value="" disabled selected>
-              Look for..
+              Looking for..
             </option>
             <option>50 Pints/month</option>
             <option>100 Pints/month</option>

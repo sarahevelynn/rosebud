@@ -47,7 +47,7 @@ ol.progtrckr li:after {
 }
 ol.progtrckr li:before {
   position: relative;
-  bottom: -3.7rem;
+  bottom: -4rem;
   float: left;
   left: 50%;
 }

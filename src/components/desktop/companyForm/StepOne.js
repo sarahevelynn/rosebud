@@ -59,9 +59,9 @@ export class StepOne extends React.Component {
     return (
       <div>
         <SimpleStorage parent={this} />
-        <h2 className="formHeader">
-          Please Fill Out Your Administrator and Company Information
-        </h2>
+        <h1 className="formHeader">
+          Please Fill Out Your Company Information
+        </h1>
         <div className="formSection">
           <input
             type="text"
@@ -89,49 +89,50 @@ export class StepOne extends React.Component {
           />
         </div>
         <br />
+        <hr />
         <div className="formSection">
-          <label>Company Adress</label>
-          <hr />
-          <label htmlFor="companyAdressStreet">Street </label>
+          <h2 id="addressLabel">Company Adress</h2>
+          <br />
           <input
             type="text"
-            className="shorterInput"
+            className="addressInput"
             value={this.state.companyAdressStreet}
             onChange={this.handleAdressStreetChange}
             name="companyAdressStreet"
+            placeholder="Street Address"
           />
-          <label htmlFor="companyAdressApt">Apt, Unit, Floor</label>
           <input
             type="text"
-            className="shorterInput"
+            className="addressInput"
             value={this.state.companyAdressApt}
             onChange={this.handleAdressAptChange}
             name="companyAdressApt"
+            placeholder="Apt, Unit, Floor"
           />
           <br />
-          <label htmlFor="companyAdressCity">City</label>
           <input
             type="text"
-            className="shorterInput"
+            className="addressInput"
             value={this.state.companyAdressCity}
             onChange={this.handleAdressCityChange}
             name="companyAdressCity"
+            placeholder="City"
           />
-          <label htmlFor="companyAdressState">State</label>
           <input
             type="text"
-            className="shorterInput"
+            className="addressInput"
             value={this.state.companyAdressState}
             onChange={this.handleStateChange}
             name="companyAdressState"
+            placeholder="State"
           />
-          <label htmlFor="companyAdressZip">Zip Code</label>
           <input
             type="text"
-            className="shorterInput"
+            className="addressInput"
             value={this.state.companyAdressZip}
             onChange={this.handleAdressZipChange}
             name="companyAdressZip"
+            placeholder="Zip Code"
           />
         </div>
         <br />

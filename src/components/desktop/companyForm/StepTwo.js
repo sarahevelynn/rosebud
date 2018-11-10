@@ -45,7 +45,7 @@ export class StepTwo extends React.Component {
       <div>
         <SimpleStorage parent={this} />
         <h2 className="formHeader">
-          Please Indicate Your Enrollment Preferences
+          Please Input the Business Contact Information
         </h2>
         <div className="formSection2">
           <input
@@ -54,15 +54,15 @@ export class StepTwo extends React.Component {
             value={this.state.companyPhone}
             onChange={this.handlePhoneChange}
             name="companyPhone"
-            placeholder="Your name"
+            placeholder="Name"
           />
           <input
             type="text"
-            className="dropDownInput"
+            className="shorterInput"
             onChange={this.handleContactNumber}
             value={this.state.contactNumber}
             name="contactNumber"
-            placeholder="Your contact number"
+            placeholder="Contact number"
           />
           <input
             type="text"
@@ -70,10 +70,10 @@ export class StepTwo extends React.Component {
             value={this.state.contactTitle}
             onChange={this.handleContactTitle}
             name="contactTitle"
-            placeholder="Your title"
+            placeholder="Title"
           />
           <hr />
-          <label htmlFor="extraInfo">Any extra information about yourself?</label>
+          <h3 id="extra" htmlFor="extraInfo">Any extra information about contact or company?</h3>
           <br />
           <input
             type="text"
