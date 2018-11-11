@@ -30,8 +30,7 @@ class StepFour extends Component {
     let contactNumber = JSON.parse(window.localStorage._contactNumber);
     let contactTitle = JSON.parse(window.localStorage._contactTitle);
     let extraInfo = JSON.parse(window.localStorage._extraInfo);
-    let flavors = JSON.parse(window.localStorage._flavors);
-    let capacity = JSON.parse(window.localStorage._capacity);
+    let coco = JSON.parse(window.localStorage._coco);
     super(props);
     this.state = {
       redirect: false,
@@ -47,8 +46,7 @@ class StepFour extends Component {
       contactNumber: contactNumber,
       contactTitle: contactTitle,
       extraInfo: extraInfo,
-      flavors: flavors,
-      capacity: capacity,
+      coco: coco,
       message: "",
       isLoading: false
     };
@@ -70,8 +68,7 @@ class StepFour extends Component {
       contactNumber: data.get("contactNumber"),
       contactTitle: data.get("contactTitle"),
       extraInfo: data.get("extraInfo"),
-      flavors: data.get("flavors"),
-      capacity: data.get("capacity")
+      coco: data.get("coco"),
     };
   };
 
@@ -137,43 +134,43 @@ class StepFour extends Component {
         <form onSubmit={this.addCompanyInfo}>
           <div className="formSection">
             <div className="formAnswer">
-              <label htmlFor="companyName">Company Name</label>
+              <h3> Company Information </h3>
+              <hr />
+              <label htmlFor="companyName">Name</label>
               <input
-                className="formInput"
+                className="formInputFinal"
                 name="companyName"
                 defaultValue={this.state.companyName}
               />
-              <label htmlFor="companyEmail">Company Phone Email</label>
+              <label htmlFor="companyEmail">Email</label>
               <input
-                className="formInput"
+                className="formInputFinal"
                 name="companyEmail"
                 defaultValue={this.state.companyEmail}
               />
+              <label htmlFor="companyPhone">Phone</label>
+              <input
+                className="formInputFinal"
+                name="companyPhone"
+                defaultValue={this.state.companyPhone}
+              />
             </div>
           </div>
+          <hr />
           <br />
           <div className="formSection">
-            <label htmlFor="companyPhone">Company Phone Number</label>
-            <input
-              className="formInput"
-              name="companyPhone"
-              defaultValue={this.state.companyPhone}
-            />
-          </div>
-          <br />
-          <div className="formSection">
-            <label htmlFor="companyAdress">Company Adress</label>
+            <h3>Company Adress</h3>
             <hr />
             <div className="formAnswer">
               <label htmlFor="companyAdressStreet">Street </label>
               <input
-                className="formInput"
+                className="formInputFinal"
                 name="companyAdressStreet"
                 defaultValue={this.state.companyAdressStreet}
               />
               <label htmlFor="companyAdressApt">Apt, Unit, Floor</label>
               <input
-                className="formInput"
+                className="formInputFinal"
                 name="companyAdressApt"
                 defaultValue={this.state.companyAdressApt}
               />
@@ -182,19 +179,19 @@ class StepFour extends Component {
             <div className="formAnswer">
               <label htmlFor="companyAdressCity">City</label>
               <input
-                className="formInput"
+                className="formInputFinal"
                 name="companyAdressCity"
                 defaultValue={this.state.companyAdressCity}
               />
               <label htmlFor="companyAdressState">State</label>
               <input
-                className="formInput"
+                className="formInputFinal"
                 name="companyAdressState"
                 defaultValue={this.state.companyAdressState}
               />
               <label htmlFor="companyAdressZip">Zip Code</label>
               <input
-                className="formInput"
+                className="formInputFinal"
                 name="companyAdressZip"
                 defaultValue={this.state.companyAdressZip}
               />
@@ -205,55 +202,47 @@ class StepFour extends Component {
           <br />
           <div className="formSection2">
             <div className="formAnswer">
-              <label htmlFor="contactName">What is your name?</label>
+              <h3> Contact Information </h3>
+              <hr />
+              <label htmlFor="contactName">Name</label>
               <input
-                className="formInput"
+                className="formInputFinal"
                 name="contactName"
                 defaultValue={this.state.contactName}
               />
-              <label htmlFor="contactNumber">Your contact number</label>
+              <label htmlFor="contactNumber">Contact number</label>
               <input
-                className="formInput"
+                className="formInputFinal"
                 name="contactNumber"
                 defaultValue={this.state.contactNumber}
               />
-            </div>
-            <hr />
-            <div className="formAnswer">
-              <label htmlFor="contactTitle">What is your title</label>
+              <label htmlFor="contactTitle">Title</label>
               <input
-                className="formInput"
+                className="formInputFinal"
                 name="contactTitle"
                 defaultValue={this.state.contactTitle}
               />
             </div>
-          </div>
-          <br />
-          <hr />
-          <br />
-          <div className="formSection2">
+            <br />
             <div className="formAnswer">
               <label htmlFor="extraInfo">Extra info</label>
+              <br />
               <input
-                className="formInput"
+                id="formInputExtra"
                 name="extraInfo"
                 defaultValue={this.state.extraInfo}
-              />
-              <label htmlFor="flavors">Flavors</label>
-              <input
-                className="formInput"
-                name="flavors"
-                defaultValue={this.state.flavors}
               />
             </div>
           </div>
           <div className="formSection2">
+            <h3> Flavor Information </h3>
+            <hr />
             <div className="formAnswer">
-              <label htmlFor="capacity">Capacity</label>
+              <label htmlFor="coco">Chocolate?</label>
               <input
-                className="formInput"
-                name="capacity"
-                defaultValue={this.state.capacity}
+                className="formInputFinal"
+                name="coco"
+                defaultValue={this.state.coco}
               />
             </div>
             <hr />
@@ -270,14 +259,9 @@ class StepFour extends Component {
                 <p> {this.state.message} </p>
               )}
             </div>
-            <div className="multiPageSubmit">
-              <input
-                type="submit"
-                className="submitButton"
-                defaultValue="Submit Your Enrollment"
-              />
+            <div id="multiPageSubmit">
+              <input type="submit" id="submitButton" defaultValue="Submit" />
             </div>
-            <hr />
           </div>
         </form>
       </div>

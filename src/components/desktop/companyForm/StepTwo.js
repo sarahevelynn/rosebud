@@ -51,9 +51,9 @@ export class StepTwo extends React.Component {
           <input
             type="text"
             className="shorterInput"
-            value={this.state.companyPhone}
-            onChange={this.handlePhoneChange}
-            name="companyPhone"
+            value={this.state.contactName}
+            onChange={this.handleContactName}
+            name="contactName"
             placeholder="Name"
           />
           <input

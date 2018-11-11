@@ -5,8 +5,8 @@ export class StepThree extends React.Component {
   constructor() {
     super();
     this.state = {
-      flavors: "",
-      capacity: "",
+      checked: false,
+      quantity: "",
       coco: "",
       vanilla: "",
       strawberry: ""
@@ -32,9 +32,9 @@ export class StepThree extends React.Component {
     });
   };
 
-  handleCapacity = event => {
+  handleQuantity = event => {
     this.setState({
-      capacity: event.target.capacity
+      quantity: event.target.quantity
     });
   };
 
@@ -76,11 +76,11 @@ export class StepThree extends React.Component {
             </label>
           </div>
           <hr />
-          <h3 id="order" htmlFor="capacity">Monthly Order Quantity?</h3>
+          <h3 id="order" htmlFor="quantity">Monthly Order Quantity?</h3>
           <select
-            name="subscription"
-            onChange={this.handleCapacity}
-            value={this.state.capacity}
+            name="quantity"
+            onChange={this.handleQuantity}
+            value={this.state.quantity}
             className="signupInputDrop"
           >
             <option value="" disabled selected>

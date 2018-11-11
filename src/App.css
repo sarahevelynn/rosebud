@@ -10,8 +10,10 @@
 }
 
 .logo {
-  height: 200px;
-  padding:1rem
+  height: 6rem;
+  padding-left: 1.5rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem
 }
 
 nav {
@@ -93,8 +95,14 @@ h2{
   padding-right: 10rem
 }
 
+#welcomeDiv{
+  width:100%;
+  background-color: #0d395b
+}
+
+
 #frontPhoto{
-  width:100%
+  width:57%
 }
 
 #infoSignup{
@@ -119,6 +127,13 @@ h2{
 
 .multiFormDiv{
 
+}
+
+#multiPageSubmit{
+  display:flex;
+  justify-content: flex-end;
+  margin-bottom: 10rem;
+  margin-right: 5rem
 }
 
 .formInput{
@@ -211,4 +226,15 @@ h2{
 .flavors{
   height:2rem;
   margin-right: 0.5rem;
+}
+
+.formInputFinal{
+  font-size: 1rem;
+  width: auto;
+  margin: 1rem;
+}
+
+#formInputExtra{
+  width:60%;
+  height:auto
 }
