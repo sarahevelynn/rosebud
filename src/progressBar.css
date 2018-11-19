@@ -104,7 +104,8 @@ ol.progtrckr li.progtrckr-done:hover:before {
   border-radius: 4px;
   border-width: 2px;
   margin: 1rem;
-  margin-left: 5rem
+  margin-left: 5rem;
+  margin-bottom: 10rem
 }
 
 .previousButton {
@@ -114,7 +115,8 @@ ol.progtrckr li.progtrckr-done:hover:before {
   border-radius: 4px;
   border-width: 2px;
   margin: 1rem;
-  margin-left: 5rem
+  margin-left: 5rem;
+  margin-bottom: 10rem
 }
 
 #signupInput {

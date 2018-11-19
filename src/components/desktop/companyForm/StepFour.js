@@ -254,19 +254,19 @@ class StepFour extends Component {
               <input
                 className="formInputFinal"
                 name="berry"
-                defaultValue={this.state.berry}
+                defaultValue={this.state.berry ? "Yes" : "No"}
               />
               <label htmlFor="vanilla">Vanilla?</label>
               <input
                 className="formInputFinal"
                 name="vanilla"
-                defaultValue={this.state.vanilla}
+                defaultValue={this.state.vanilla ? "Yes" : "No"}
               />
               <label htmlFor="mint">Mint?</label>
               <input
                 className="formInputFinal"
                 name="mint"
-                defaultValue={this.state.mint}
+                defaultValue={this.state.mint ? "Yes" : "No"}
               />
             </div>
             <div className="formAnswer">

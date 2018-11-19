@@ -45,9 +45,9 @@ export class StepThree extends React.Component {
     return (
       <div>
         <SimpleStorage parent={this} />
-        <h2 className="formHeader">
+        <h3 className="order">
           Please Indicate Your Flavor Preference and Amount
-        </h2>
+        </h3>
         <div className="formSection2">
           <div>
             <label className="formLabel">
@@ -79,7 +79,7 @@ export class StepThree extends React.Component {
             </label>
           </div>
           <hr />
-          <h3 id="order" htmlFor="quantity">
+          <h3 className="order" htmlFor="quantity">
             Monthly Order Quantity?
           </h3>
           <select

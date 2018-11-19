@@ -236,14 +236,13 @@ h2 {
   margin-top: 2rem;
 }
 
-#order {
-  font-size: 2rem;
+.order {
+  font-size: 1.7rem;
   font-weight: normal;
   color: #0d395b;
 }
 
 .signupInputDrop {
-  margin-top: 1rem;
   font-size: 1.5rem;
 }
 
