@@ -1,5 +1,16 @@
+@font-face {
+  font-family: TEXAT;
+  src: url("./TEXAT.otf");
+}
+
+@font-face {
+  font-family: Domine;
+  src: url("https://fonts.googleapis.com/css?family=Domine");
+}
+
 .App {
   text-align: center;
+  font-family: Domine, serif;
 }
 
 #header {
@@ -13,7 +24,11 @@
   height: 6rem;
   padding-left: 1.5rem;
   padding-top: 0.5rem;
-  padding-bottom: 0.5rem
+  padding-bottom: 0.5rem;
+}
+
+p {
+  font-size: 1.1rem;
 }
 
 nav {
@@ -21,12 +36,12 @@ nav {
   justify-content: center;
   align-items: center;
   flex-direction: row;
-  padding-right: 1rem
+  padding-right: 1rem;
 }
 
 #navItem {
   padding-left: 1rem;
-  padding-right: 1rem
+  padding-right: 1rem;
 }
 
 a {
@@ -36,141 +51,171 @@ a {
 
 footer {
   display: flex;
-  justify-content: space-between;
+  align-items: center;
+  justify-content: space-around;
   align-items: center;
   flex-direction: row;
   padding-left: 3rem;
-  padding-right: 3rem
+  padding-right: 3rem;
+  height: 80px;
+  width: 100%;
+  position: fixed;
+  left: 0;
+  bottom: 0;
 }
 
-#social{
+#copy{
+  color: #24344b;
+  font-size: 1.5rem;
+}
+
+#social {
   display: flex;
   align-items: center;
   flex-direction: row;
 }
 
 .socialPhoto {
-  height:4rem;
-  padding:1rem
+  height: 4rem;
+  padding: 1rem;
 }
 
-h2{
-  color:#24344b
+h2 {
+  color: #24344b;
 }
 
-.aboutSection{
+.aboutSection {
   padding-left: 10rem;
-  padding-right: 10rem
+  padding-right: 10rem;
 }
 
-#about1{
+.aboutHeader {
+  font-family: TEXAT, sans-serif;
+}
+
+.aboutContent {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+
+.aboutPicContainer {
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+.aboutPhoto {
+  height: 100%;
+}
+
+#about1 {
   background-color: #29404f;
-  color:white;
+  color: white;
   padding-top: 1rem;
   padding-bottom: 1rem;
   text-align: left;
-  padding-right: 25rem
 }
 
-#about2{
+#about2 {
   background-color: #0d395b;
-  color:white;
+  color: white;
   padding-top: 1rem;
   padding-bottom: 1rem;
   text-align: left;
-  padding-left: 25rem
 }
 
-#about3{
+#about3 {
   background-color: #365366;
-  color:white;
+  color: white;
   padding-top: 1rem;
   padding-bottom: 1rem;
   text-align: left;
-  padding-right: 25rem
 }
 
-#welcomePage{
+#welcomePage {
   padding-left: 10rem;
-  padding-right: 10rem
+  padding-right: 10rem;
 }
 
-#welcomeDiv{
-  width:100%;
-  background-color: #0d395b
+#welcomeDiv {
+  width: 100%;
+  background-color: #0d395b;
 }
 
-
-#frontPhoto{
-  width:57%
+#frontPhoto {
+  width: 57%;
 }
 
-#infoSignup{
-  margin:0
+#infoSignup {
+  margin: 0;
 }
 
-#signup{
-  display:flex;
+#signup {
+  display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   text-align: left;
-  font-size: 2rem
+  font-size: 2rem;
 }
 
-.signUp{
-  display:flex;
+.signUp {
+  display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
 
-.multiFormDiv{
-
+.multiFormDiv {
 }
 
-#multiPageSubmit{
-  display:flex;
+#multiPageSubmit {
+  display: flex;
   justify-content: flex-end;
   margin-bottom: 10rem;
-  margin-right: 5rem
+  margin-right: 5rem;
 }
 
-.formInput{
-  width:60%;
-  height:2rem
+.formInput {
+  width: 60%;
+  height: 2rem;
 }
 
-.shorterInput{
+.shorterInput {
   text-align: center;
 }
 
-#welcomeForm{
+#welcomeForm {
   font-size: 3rem;
-  margin:0;
-  color: #24344b
+  margin: 0;
+  color: #24344b;
 }
 
-.formHeader{
+#welcomePage {
+  font-size: 2rem;
+  margin-bottom: 5rem;
+}
+
+.formHeader {
   font-size: 2rem;
   font-weight: 450;
-  color: #24344b
+  color: #24344b;
 }
 
-.shorterInput{
+.shorterInput {
   margin-left: 1rem;
   margin-right: 1rem;
-  font-size: 1.5rem
+  font-size: 1.5rem;
 }
 
-#addressLabel{
+#addressLabel {
   font-size: 1.7rem;
   color: #0d395b;
-  font-weight:400;
-  margin:0
+  font-weight: 400;
+  margin: 0;
 }
 
-.addressInput{
+.addressInput {
   font-size: 1.5rem;
   margin-bottom: 2rem;
   margin-left: 1rem;
@@ -178,26 +223,26 @@ h2{
   text-align: center;
 }
 
-#extra{
+#extra {
   font-weight: normal;
   margin: 0;
-  margin-top: 2rem
+  margin-top: 2rem;
 }
 
-#order{
+#order {
   font-size: 2rem;
   font-weight: normal;
   color: #0d395b;
 }
 
-.signupInputDrop{
+.signupInputDrop {
   margin-top: 1rem;
-  font-size: 1.5rem
+  font-size: 1.5rem;
 }
 
-#message{
-  width:30rem;
-  height: 10rem
+#message {
+  width: 30rem;
+  height: 10rem;
 }
 
 #submitButton {
@@ -216,25 +261,25 @@ h2{
   border-radius: 4px;
 }
 
-.formLabel{
+.formLabel {
   font-size: 2rem;
   padding-right: 1rem;
   padding-left: 0.3rem;
   color: #0d395b;
 }
 
-.flavors{
-  height:2rem;
+.flavors {
+  height: 2rem;
   margin-right: 0.5rem;
 }
 
-.formInputFinal{
+.formInputFinal {
   font-size: 1rem;
   width: auto;
   margin: 1rem;
 }
 
-#formInputExtra{
-  width:60%;
-  height:auto
+#formInputExtra {
+  width: 60%;
+  height: auto;
 }

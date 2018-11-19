@@ -6,9 +6,9 @@ export class CompanyEnrollment extends React.Component {
     return (
       <div className="aboutSections">
         <div className="aboutContent">
-          <div id="welcomePage">
+          <div>
             <h1 id="welcomeForm">Welcome to RoseBud.</h1>
-            <h2>
+            <h2 id="welcomePage">
               We would love to explore a relationship with your company.
               <br />
               Please fill out the following steps to apply
