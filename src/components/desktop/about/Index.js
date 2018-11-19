@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import WhoWeAre from "./WhoWeAre";
 import WhatWeMake from "./WhatWeMake";
 import EdibleSafety from "./EdibleSafety";
+import Footer from "../footer/Index";
 
 export default function AboutUs() {
   return (
@@ -11,6 +12,7 @@ export default function AboutUs() {
         <WhoWeAre />
         <WhatWeMake />
         <EdibleSafety />
+        <Footer />
       </div>
     </div>
   );

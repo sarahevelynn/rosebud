@@ -27,7 +27,7 @@
   padding-bottom: 0.5rem;
 }
 
-p {
+p{
   font-size: 1.1rem;
 }
 
@@ -49,7 +49,17 @@ a {
   text-decoration: none;
 }
 
-footer {
+#footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  padding-left: 3rem;
+  padding-right: 3rem;
+  background-color: white
+}
+
+#stickyFooter {
   display: flex;
   align-items: center;
   justify-content: space-around;
@@ -63,11 +73,6 @@ footer {
   left: 0;
   bottom: 0;
   background-color: white
-}
-
-#copy{
-  color: #24344b;
-  font-size: 1.5rem;
 }
 
 #social {
@@ -94,19 +99,20 @@ h2 {
   font-family: TEXAT, sans-serif;
 }
 
-.aboutContent {
-  display: flex;
+.aboutContent{
+  display:flex;
   flex-direction: row;
-  width: 100%;
+  width:100%
 }
 
-.aboutPicContainer {
+.aboutPicContainer{
   margin-left: 1rem;
-  margin-right: 1rem;
+  margin-right: 1rem
+
 }
 
-.aboutPhoto {
-  height: 100%;
+.aboutPhoto{
+  height:100%;
 }
 
 #about1 {
@@ -192,13 +198,9 @@ h2 {
   color: #24344b;
 }
 
-#welcomePage {
+#welcomePage{
   font-size: 2rem;
-  margin-bottom: 5rem;
-}
-
-.flavorImage{
-  height:7rem
+  margin-bottom: 5rem
 }
 
 .formHeader {
@@ -274,8 +276,12 @@ h2 {
 }
 
 .flavors {
-  height: 2rem;
+  height: 10rem;
   margin-right: 0.5rem;
+}
+
+.flavorImage{
+  height:10rem
 }
 
 .formInputFinal {

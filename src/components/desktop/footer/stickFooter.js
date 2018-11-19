@@ -3,9 +3,9 @@ import email from "./assets/email.png";
 import instagram from "./assets/instagram.png";
 import facebook from "./assets/facebook.png";
 
-export default function Footer() {
+export default function StickyFooter() {
   return (
-    <footer id="footer">
+    <footer id="stickyFooter">
       <p id="copy">&copy; 2018, RoseBud, LLC</p>
       <div id="social">
         <a href={"mailto:samrose244@gmail.com"} target="_blank">

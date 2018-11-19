@@ -10,29 +10,29 @@ export class StepThree extends React.Component {
     this.state = {
       checked: false,
       quantity: "",
-      berry: "",
-      vanilla: "",
-      mint: ""
+      berry: false,
+      vanilla: false,
+      mint: false
     };
     this.initialState = this.state;
   }
 
-  handleCoco = event => {
-    this.setState({
-      flavors: event.target.coco
-    });
+  handleBerry = event => {
+    this.setState(prevState => ({
+      berry: !prevState.berry
+    }));
   };
 
   handleVanilla = event => {
-    this.setState({
-      flavors: event.target.vanilla
-    });
+    this.setState(prevState => ({
+      vanilla: !prevState.vanilla
+    }));
   };
 
-  handleStrawberry = event => {
-    this.setState({
-      flavors: event.target.strawberry
-    });
+  handleMint = event => {
+    this.setState(prevState => ({
+      mint: !prevState.mint
+    }));
   };
 
   handleQuantity = event => {
@@ -53,8 +53,8 @@ export class StepThree extends React.Component {
             <label className="formLabel">
               <input
                 type="checkbox"
-                checked={this.state.coco}
-                onChange={this.handleCoco}
+                checked={this.state.berry}
+                onChange={this.handleBerry}
                 className="flavors"
               />
               <img src={berry} className="flavorImage" alt="berry" />
@@ -62,8 +62,8 @@ export class StepThree extends React.Component {
             <label className="formLabel">
               <input
                 type="checkbox"
-                checked={this.state.strawberry}
-                onChange={this.handleStrawberry}
+                checked={this.state.mint}
+                onChange={this.handleMint}
                 className="flavors"
               />
               <img src={mint} className="flavorImage" alt="mountain mint" />
@@ -79,7 +79,9 @@ export class StepThree extends React.Component {
             </label>
           </div>
           <hr />
-          <h3 id="order" htmlFor="quantity">Monthly Order Quantity?</h3>
+          <h3 id="order" htmlFor="quantity">
+            Monthly Order Quantity?
+          </h3>
           <select
             name="quantity"
             onChange={this.handleQuantity}

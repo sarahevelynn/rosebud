@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { withRouter, Redirect } from "react-router-dom";
 import Loader from "react-loader-spinner";
+import StickyFooter from "../footer/stickFooter";
 
 var baseURL = "https://saveaway401k.herokuapp.com/";
 
@@ -96,6 +97,7 @@ export default class Contact extends Component {
             </form>
           </div>
         </div>
+        <StickyFooter />
       </div>
     );
   }
