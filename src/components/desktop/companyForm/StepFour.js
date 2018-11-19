@@ -30,7 +30,12 @@ class StepFour extends Component {
     let contactNumber = JSON.parse(window.localStorage._contactNumber);
     let contactTitle = JSON.parse(window.localStorage._contactTitle);
     let extraInfo = JSON.parse(window.localStorage._extraInfo);
-    let coco = JSON.parse(window.localStorage._coco);
+    let berry = JSON.parse(window.localStorage._berry);
+    let mint = JSON.parse(window.localStorage._mint);
+    let vanilla = JSON.parse(window.localStorage._vanilla);
+    let quantity = JSON.parse(window.localStorage._quantity);
+
+
     super(props);
     this.state = {
       redirect: false,
@@ -46,7 +51,10 @@ class StepFour extends Component {
       contactNumber: contactNumber,
       contactTitle: contactTitle,
       extraInfo: extraInfo,
-      coco: coco,
+      berry: berry,
+      mint: mint,
+      vanilla: vanilla,
+      quantity: quantity,
       message: "",
       isLoading: false
     };
@@ -68,7 +76,11 @@ class StepFour extends Component {
       contactNumber: data.get("contactNumber"),
       contactTitle: data.get("contactTitle"),
       extraInfo: data.get("extraInfo"),
-      coco: data.get("coco"),
+      berry: data.get("berry"),
+      mint: data.get("mint"),
+      vanilla: data.get("vanilla"),
+      quantity: data.get("quantity"),
+
     };
   };
 
@@ -238,11 +250,31 @@ class StepFour extends Component {
             <h3> Flavor Information </h3>
             <hr />
             <div className="formAnswer">
-              <label htmlFor="coco">Chocolate?</label>
+              <label htmlFor="berry">Berry?</label>
               <input
                 className="formInputFinal"
-                name="coco"
-                defaultValue={this.state.coco}
+                name="berry"
+                defaultValue={this.state.berry}
+              />
+              <label htmlFor="vanilla">Vanilla?</label>
+              <input
+                className="formInputFinal"
+                name="vanilla"
+                defaultValue={this.state.vanilla}
+              />
+              <label htmlFor="mint">Mint?</label>
+              <input
+                className="formInputFinal"
+                name="mint"
+                defaultValue={this.state.mint}
+              />
+            </div>
+            <div className="formAnswer">
+              <label htmlFor="quantity">Monthly Order Quantity?</label>
+              <input
+                className="formInputFinal"
+                name="quantity"
+                defaultValue={this.state.quantity}
               />
             </div>
             <hr />
@@ -250,7 +282,7 @@ class StepFour extends Component {
               {this.state.isLoading === true ? (
                 <Loader
                   type="ThreeDots"
-                  color="#c33539"
+                  color="#24344b"
                   height="50"
                   width="100"
                   className="Loader"

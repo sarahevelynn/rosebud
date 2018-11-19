@@ -1,5 +1,8 @@
 import React from "react";
 import SimpleStorage from "./SimpleStorage";
+import berry from "./Assets/berry.png";
+import mint from "./Assets/mint.png";
+import vanilla from "./Assets/vanilla.png";
 
 export class StepThree extends React.Component {
   constructor() {
@@ -7,9 +10,9 @@ export class StepThree extends React.Component {
     this.state = {
       checked: false,
       quantity: "",
-      coco: "",
+      berry: "",
       vanilla: "",
-      strawberry: ""
+      mint: ""
     };
     this.initialState = this.state;
   }
@@ -54,7 +57,7 @@ export class StepThree extends React.Component {
                 onChange={this.handleCoco}
                 className="flavors"
               />
-              coco
+              <img src={berry} className="flavorImage" alt="berry" />
             </label>
             <label className="formLabel">
               <input
@@ -63,7 +66,7 @@ export class StepThree extends React.Component {
                 onChange={this.handleStrawberry}
                 className="flavors"
               />
-              strawberry
+              <img src={mint} className="flavorImage" alt="mountain mint" />
             </label>
             <label className="formLabel">
               <input
@@ -72,7 +75,7 @@ export class StepThree extends React.Component {
                 onChange={this.handleVanilla}
                 className="flavors"
               />
-              vanilla
+              <img src={vanilla} className="flavorImage" alt="vanilla" />
             </label>
           </div>
           <hr />
