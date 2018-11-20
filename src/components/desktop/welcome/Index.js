@@ -7,8 +7,8 @@ export default class Welcome extends React.Component {
   render() {
     return (
       <div id="welcomeDiv">
-      <img src={RoseBud} id="frontPhoto" alt="Rose Bud Image" />
-      <Footer />
+        <img src={RoseBud} id="frontPhoto" alt="Rose Bud Image" />
+        <Footer />
       </div>
     );
   }

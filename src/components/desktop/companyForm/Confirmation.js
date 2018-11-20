@@ -15,7 +15,11 @@ export default class Confirmation extends React.Component {
               We will be in contact with you soon for next steps on your account
             </h2>
             <a href="https://imgflip.com/gif/21gr1">
-              <img src="https://i.imgflip.com/21gr1.gif" id="gif" alt="Good to Go!"/>
+              <img
+                src="https://i.imgflip.com/21gr1.gif"
+                id="gif"
+                alt="Good to Go!"
+              />
             </a>
           </div>
           <Link to="/Guide">

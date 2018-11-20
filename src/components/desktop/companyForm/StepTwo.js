@@ -73,7 +73,9 @@ export class StepTwo extends React.Component {
             placeholder="Title"
           />
           <hr />
-          <h3 id="extra" htmlFor="extraInfo">Any extra information about contact or company?</h3>
+          <h3 id="extra" htmlFor="extraInfo">
+            Any extra information about contact or company?
+          </h3>
           <br />
           <input
             type="text"

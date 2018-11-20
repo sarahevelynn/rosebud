@@ -134,7 +134,7 @@ export default class MultiStep extends React.Component {
       .then(resp => {
         this.response = resp.message;
       });
-      console.log(this.state);
+    console.log(this.state);
   };
 
   handleStepOne = data => {
@@ -176,8 +176,8 @@ export default class MultiStep extends React.Component {
     console.log("handle3", this.state);
   };
 
-  next = (event) => {
-    this.sendMessage(event)
+  next = event => {
+    this.sendMessage(event);
     this.setNavState(this.state.compState + 1);
   };
 
@@ -214,11 +214,11 @@ export default class MultiStep extends React.Component {
       },
       {
         name: "Step Two",
-        component: <StepTwo sendData={this.handleStepTwo}/>
+        component: <StepTwo sendData={this.handleStepTwo} />
       },
       {
         name: "Step Three",
-        component: <StepThree sendData={this.handleStepThree}/>
+        component: <StepThree sendData={this.handleStepThree} />
       },
       {
         name: "Confirm!",

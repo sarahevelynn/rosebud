@@ -11,7 +11,7 @@ export default function WhatWeMake() {
         </div>
 
         <div>
-        <h1 className="aboutHeader"> What We Make </h1>
+          <h1 className="aboutHeader"> What We Make </h1>
           <p>
             The way we look at it, the marijuana in our ice cream is just an
             added bonus to an already tremendous frozen treat. Our first three

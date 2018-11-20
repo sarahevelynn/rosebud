@@ -12,7 +12,7 @@ export class StepOne extends React.Component {
       companyAdressApt: "",
       companyAdressCity: "",
       companyAdressState: "",
-      companyAdressZip: "",
+      companyAdressZip: ""
     };
     this.initialState = this.state;
   }
@@ -59,9 +59,7 @@ export class StepOne extends React.Component {
     return (
       <div>
         <SimpleStorage parent={this} />
-        <h1 className="formHeader">
-          Please Fill Out Your Company Information
-        </h1>
+        <h1 className="formHeader">Please Fill Out Your Company Information</h1>
         <div className="formSection">
           <input
             type="text"

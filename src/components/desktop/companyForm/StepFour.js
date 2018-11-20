@@ -35,7 +35,6 @@ class StepFour extends Component {
     let vanilla = JSON.parse(window.localStorage._vanilla);
     let quantity = JSON.parse(window.localStorage._quantity);
 
-
     super(props);
     this.state = {
       redirect: false,
@@ -79,8 +78,7 @@ class StepFour extends Component {
       berry: data.get("berry"),
       mint: data.get("mint"),
       vanilla: data.get("vanilla"),
-      quantity: data.get("quantity"),
-
+      quantity: data.get("quantity")
     };
   };
 

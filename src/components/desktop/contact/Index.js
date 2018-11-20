@@ -18,7 +18,7 @@ export default class Contact extends Component {
     return {
       signupName: data.get("signupName"),
       signupEmail: data.get("signupEmail"),
-      signupPhone: data.get("message"),
+      signupPhone: data.get("message")
     };
   };
 
