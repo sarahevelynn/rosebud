@@ -3,10 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "mapbox-gl": "^0.50.0",
     "react": "^16.3.2",
     "react-dom": "^16.3.2",
-    "react-google-maps": "^9.4.5",
     "react-icons": "^3.2.2",
     "react-loader-spinner": "^2.0.6",
     "react-map-gl": "^3.3.8",

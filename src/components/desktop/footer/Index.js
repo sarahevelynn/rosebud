@@ -6,8 +6,8 @@ import facebook from "./assets/facebook.png";
 export default function Footer() {
   return (
     <footer id="footer">
-      <p id="copy">&copy; 2018, RoseBud, LLC</p>
-      <div id="social">
+      <p className="copy">&copy; 2018, RoseBud, LLC</p>
+      <div className="social">
         <a href={"mailto:samrose244@gmail.com"} target="_blank">
           <img src={email} className="socialPhoto" alt="email us" />
         </a>
